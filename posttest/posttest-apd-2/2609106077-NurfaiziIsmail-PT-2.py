@@ -10,7 +10,7 @@ harga_komponen = [komponen_1, komponen_2, komponen_3, komponen_4, komponen_5, ko
 
 total_biaya = komponen_1 + komponen_2 + komponen_3 + komponen_4 + komponen_5 + komponen_6 + biaya_admin
 
-rata_rata = total_biaya / len(harga_komponen)
+rata_rata =  total_biaya / len(harga_komponen)
 
 nim = 77
 
