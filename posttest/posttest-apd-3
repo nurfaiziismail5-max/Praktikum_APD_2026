@@ -1,0 +1,59 @@
+print("=" * 30)
+print("     SISTEM TOP UP GAME")
+print("=" * 30)
+
+username_benar = "Faiz"
+password_benar = "77"
+
+print("------LOGIN------")
+
+username = input("username : ")
+password = input("password : ")
+
+if username == username_benar and password == password_benar:
+
+    print("Login Berhasil")
+
+    print("-" * 30)
+    print("         DATA TOP UP")
+    print("-" * 30)
+
+    ID_Player = input("ID Player : ")
+    Nama_Game = input("Genshin Impact / Minecraft / Mobile Legends : ")
+    Kategori = input("Kecil / Menengah / Besar : ")
+    Pembayaran = input("Pulsa / E-Wallet : ")
+
+    if Kategori == "Kecil":
+        harga = 15000
+    elif Kategori == "Menengah":
+        harga = 50000
+    elif Kategori == "Besar":
+        harga = 150000
+
+    biaya_admin = 2500 if Pembayaran == "Pulsa" else 500
+
+    total_bayar = harga + biaya_admin
+
+    uang_bayar = int(input("Nominal Uang : RP "))
+
+    if total_bayar > uang_bayar:
+        print("Transaksi Gagal")
+        print("Saldo Anda Tidak Cukup")
+    else:
+        kembalian = uang_bayar - total_bayar
+
+        print("=" * 30)
+        print("        Struk Bayar")
+        print("=" * 30)
+
+        print("Biaya Admin : Rp", biaya_admin)
+        print("Total Bayar : Rp", total_bayar)
+        print("Uang Dibayar : Rp", uang_bayar)
+        print("Kembalian : Rp", kembalian)
+
+else:
+    print("Login Gagal")
+
+print("=" * 40)
+print("   Terima Kasih telah Top Up Disini :)")
+print("=" * 40)
