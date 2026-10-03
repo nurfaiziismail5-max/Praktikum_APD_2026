@@ -1,12 +1,34 @@
-#angka= int(input("Masukan Angka: "))
+status = True
+while status == True:
+    print(" ==== MENU ====")
+    print("1. Profile Kelompok")
+    print("2. Bina Damping")
+    print("3. Tambah Anggota")
+    print("4. Daftar Anggota")
+    print("5. Hapus Nama Anggota")
+    print("6. Edit Nama Anggota")
+    ulang = "ya"
+    daftar_anggota = ["Zaid", "Belva", "Al","Ririn","Azka","Johan","Niyah","Falih","Juna","Ibnu","Adam","Faiz","Diyah","Zaky","Rado"]
+    tambahan_anggota = []
+    pilihan = input(" Pilih Menu : ")
+    if pilihan == "1":
+        print(" === INTERNET OF THINGS ===")
+        print(" Filosofi : Tulisan IOT Menjadi nama kelompok yang melambangkan keterhubungan dan inovasi teknologi, Bentuk wifi melambangkan keterhubungan solidaritas dan kekompakan. Pola heksagonal menggambarkan teknologi inovasi struktur dan kekuatan. Warna biru tua melambangkan kepercayaan, profesionalisme, teknologi dan ke stabilan. Biru muda melambangkan kreativitas, ketenangan, keterbukaan, dan kemudahan "
+            )
+    elif pilihan == "2" :
+        print("- Dzaky Ainur Rahman")
+        print("- Muhammadancel Prinata")
 
-#if angka > 0:
- #  print("Angka Ganjil")
-#if angka == 0:
- #  print("Angka tepat nol")
-#else:
- #  print("Angka Negatif")
+    elif pilihan == "3":
+        while ulang == "ya":
+            tambahan_anggota = input(" Tambah Anggota : ")
+            daftar_anggota.append(tambahan_anggota)
+            ulang = input("Tambah Lagi (ya/tidak)")
+            if ulang != "ya" :
+                break
 
-umur = 20
-status = "Dewasa" if umur >= 18 else "Belum Dewasa"
-print ("Dewasa" if umur >= 18 else "Belum Dewasa")
+    elif pilihan == "4":
+        print(f"Daftar Anggota = {daftar_anggota}")
+        break
+
+
