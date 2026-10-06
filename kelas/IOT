@@ -1,0 +1,92 @@
+USERNAME_BENAR = "Faiz"
+PIN_BENAR = "077"      
+
+saldo = 100000000        
+
+print("=" * 40)
+print("       SELAMAT DATANG DI ATM PAIS")
+print("=" * 40)
+
+percobaan = 0
+login_berhasil = False
+
+while percobaan < 3 and login_berhasil == False:
+    username = input("Username : ")
+    pin = input("PIN      : ")
+    percobaan = percobaan + 1
+
+    if username == USERNAME_BENAR and pin == PIN_BENAR:
+        login_berhasil = True
+        print("Login Berhasil")
+    else:
+        print("Login Gagal Sisa percobaan:", 3 - percobaan)
+        print("-" * 40)
+
+if login_berhasil == False:
+    print("Akun Anda Terblokir")
+else:
+    pilihan = 0
+    while pilihan != 4:
+        print("=" * 40)
+        print("            MENU UTAMA ATM")
+        print("=" * 40)
+        print("[1] Cek Saldo")
+        print("[2] Tarik Tunai")
+        print("[3] Setor Tunai")
+        print("[4] Keluar")
+        print("-" * 40)
+        pilihan = int(input("Pilih menu (1-4): "))
+
+        if pilihan == 1:
+            print("Saldo Anda saat ini : Rp", saldo)
+            print()
+
+        elif pilihan == 2:
+            print("Pilih kelipatan penarikan:")
+            print("[1] Kelipatan Rp 50.000")
+            print("[2] Kelipatan Rp 100.000")
+            jenis = int(input("Pilih (1/2): "))
+
+            if jenis == 1:
+                kelipatan = 50000
+            elif jenis == 2:
+                kelipatan = 100000
+            else:
+                kelipatan = 0
+                print("Pilihan kelipatan tidak valid")
+
+            if kelipatan != 0:
+                nominal = int(input("Masukkan nominal tarik tunai: Rp "))
+
+                if nominal <= 0:
+                    print("Nominal harus lebih dari 0!")
+                elif nominal % 50000 != 0:
+                    print("Nominal harus kelipatan Rp 50.000")
+                elif nominal > saldo:
+                    print("Saldo tidak mencukupi!")
+                else:
+                    saldo = saldo - nominal
+                    print("Transaksi berhasil")
+                    print("Nominal ditarik : Rp", nominal)
+                    print("Sisa saldo      : Rp", saldo)
+                    print()
+
+        elif pilihan == 3:
+            nominal = int(input("Masukkan nominal setor tunai: Rp "))
+
+            if nominal <= 0:
+                print("Nominal setor harus lebih dari 0")
+            elif nominal % 50000 != 0:
+                print("Nominal harus kelipatan Rp 50.000")
+            else:
+                saldo = saldo + nominal
+                print("Setor tunai berhasil!")
+                print("Nominal disetor : Rp", nominal)
+                print("Total saldo     : Rp", saldo)
+                print()
+
+        elif pilihan == 4:
+            print("Terima kasih telah menggunakan layanan ATM kami")
+
+        else:
+            print("Pilihan tidak valid! Masukkan angka 1-4.")
