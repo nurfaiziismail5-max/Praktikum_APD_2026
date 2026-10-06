@@ -4,7 +4,7 @@ PIN_BENAR = "077"
 saldo = 100000000        
 
 print("=" * 40)
-print("       SELAMAT DATANG DI ATM KAMPUS")
+print("       SELAMAT DATANG DI ATM PAIS")
 print("=" * 40)
 
 percobaan = 0
