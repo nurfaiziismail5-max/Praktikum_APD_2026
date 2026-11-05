@@ -3,8 +3,7 @@ import os
 from prettytable import PrettyTable
 
 
-# Warna memakai kode ANSI bawaan terminal (tidak perlu install library)
-os.system("")  # mengaktifkan kode ANSI di CMD/PowerShell Windows
+os.system("")  
 
 HIJAU = "\033[92m"
 MERAH = "\033[91m"
